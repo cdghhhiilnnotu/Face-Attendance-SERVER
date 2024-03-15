@@ -1,0 +1,612 @@
+{
+    "admin": [
+        {
+            "MaAD": "AD0001",
+            "MatKhau": "password1",
+            "TenDN": "admin1"
+        },
+        {
+            "MaAD": "AD0002",
+            "MatKhau": "password2",
+            "TenDN": "admin2"
+        },
+        {
+            "MaAD": "AD0003",
+            "MatKhau": "password3",
+            "TenDN": "admin3"
+        }
+    ],
+    "baocao": [
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0001",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010021",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0002",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010039",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0003",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010051",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0004",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010063",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0005",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010075",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0006",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010105",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0007",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010111",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0008",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010117",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0009",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010123",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0010",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010141",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0011",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010153",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0012",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010195",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0013",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010272",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0014",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010297",
+            "NgayBC": "22-02-2024 12:02:00"
+        },
+        {
+            "DiemDanh": "0",
+            "GhiChu": "",
+            "MaBC": "BC0015",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010225",
+            "NgayBC": "22-02-2024 12:02:00"
+        }
+    ],
+    "dslop": [
+        {
+            "MaDS": "DL0001",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010021",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0002",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010039",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0003",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010051",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0004",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010063",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0005",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010075",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0006",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010105",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0007",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010111",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0008",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010117",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0009",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010123",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0010",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010141",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0011",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010153",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0012",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010195",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0013",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010272",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0014",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010297",
+            "SoDD": 0
+        },
+        {
+            "MaDS": "DL0015",
+            "MaLop": "TH5216_20CN3",
+            "MaSV": "2055010225",
+            "SoDD": 0
+        }
+    ],
+    "giaovien": [
+        {
+            "DiaChi": "Hà Nội",
+            "MGV": "GV0001",
+            "MatKhau": "password1",
+            "NgSinh": "02-02-1980",
+            "SDT": "0987654321",
+            "TenGV": "Nguyễn Văn A"
+        },
+        {
+            "DiaChi": "TP. Hồ Chí Minh",
+            "MGV": "GV0002",
+            "MatKhau": "password2",
+            "NgSinh": "03-03-1985",
+            "SDT": "0123456789",
+            "TenGV": "Trần Thị B"
+        },
+        {
+            "DiaChi": "Đà Nẵng",
+            "MGV": "GV0003",
+            "MatKhau": "password3",
+            "NgSinh": "04-04-1990",
+            "SDT": "0912345678",
+            "TenGV": "Lê Văn C"
+        },
+        {
+            "DiaChi": "Cần Thơ",
+            "MGV": "GV0004",
+            "MatKhau": "password4",
+            "NgSinh": "05-05-1995",
+            "SDT": "0812345678",
+            "TenGV": "Phạm Thị D"
+        },
+        {
+            "DiaChi": "Hải Phòng",
+            "MGV": "GV0005",
+            "MatKhau": "password5",
+            "NgSinh": "06-06-2000",
+            "SDT": "0712345678",
+            "TenGV": "Nguyễn Văn E"
+        }
+    ],
+    "lophoc": [
+        {
+            "LichHoc": "Thứ 3, 5, 7 - 8h-9h",
+            "MaGV": "GV0001",
+            "MaLop": "TH5216_20CN3",
+            "PhongHoc": "I701",
+            "SoNgay": 15,
+            "SoluongSV": 15,
+            "TenMon": "Đồ họa và hiện thực ảo"
+        },
+        {
+            "LichHoc": "Thứ 3, 5, 7 - 8h-9h",
+            "MaGV": "GV0002",
+            "MaLop": "TH4307.1_20CN3",
+            "PhongHoc": "Online",
+            "SoNgay": 15,
+            "SoluongSV": 15,
+            "TenMon": "Thực tập chuyên môn"
+        },
+        {
+            "LichHoc": "Thứ 3, 5, 7 - 8h-9h",
+            "MaGV": "GV0003",
+            "MaLop": "TH4310_20CN3",
+            "PhongHoc": "H501",
+            "SoNgay": 15,
+            "SoluongSV": 15,
+            "TenMon": "Kho dữ liệu và khai phá dữ liệu"
+        },
+        {
+            "LichHoc": "Thứ 3, 5, 7 - 8h-9h",
+            "MaGV": "GV0004",
+            "MaLop": "TH5213_20CN3",
+            "PhongHoc": "I702",
+            "SoNgay": 15,
+            "SoluongSV": 15,
+            "TenMon": "Lập trình mạng"
+        },
+        {
+            "LichHoc": "Thứ 3, 5, 7 - 8h-9h",
+            "MaGV": "GV0005",
+            "MaLop": "TH4318_20CN3",
+            "PhongHoc": "Online",
+            "SoNgay": 15,
+            "SoluongSV": 15,
+            "TenMon": "Phát triển phần mềm hướng dịch vụ"
+        }
+    ],
+    "sinhvien": [
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1G1DLmDuMNtDAtuxi_hvMRtGeKAnBNpRV?usp=drive_link",
+            "LopQL": "19CN3",
+            "MSV": "1955010044",
+            "NgSinh": "01-01-2001",
+            "SDT": "0987654321",
+            "TenSV": "Mai Văn Đại"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1uvXwKQXlB8fykychmGwoaudGaIWVEDje?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010021",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Ngô Hoàng Bách"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1_EHa5skCigD6VZwvNRSXZiSao60tqsSx?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010039",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Đàm Trí Dũng"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1rY8jhq623aNTQLFXsoICt302KTvxFFag?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010042",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Nguyễn Văn Dũng"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1YdL2r1hFK7jT9LkOfwBy3tjP1re8zxvc?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010051",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Nguyễn Thành Dương"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1k5vKHocue7sGbAno7dDx8d566gM4M7WW?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010063",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Nguyễn Văn Đức"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1wOAyrGLUkDNeiJAQgjMk-0aj0NIjzUIW?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010075",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Đỗ Trung Hải"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1SKXA7BQggHKe8EWhcjhRi7r2x3CQ67Of?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010084",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Phan Hoàng Hiệp"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1x0UdBe45duKigEMiYJE4E4mrhUeWVi-Q?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010093",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Phạm Trung Hiếu"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1shD6GOjMjQ4c0pVHFSjDJ8DAP2qFN8Lb?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010099",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Lê Huy Hoàng"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1o8h5kSz9zDOP0bMm4vQoecy7UK7XAaYj?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010105",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Nguyễn Văn Hợp"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1hA_DsLV5NLAT4a76Old35yZBJe2GJBWN?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010111",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Nguyễn Minh Hùng"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1fx-uzN_GT_BuSHhUBe94p7Tt4TdF5zKd?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010117",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Lưu Tuấn Huy"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1WyjmUBNZs0HugCdX9gyckxj19H7Vm568?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010123",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Quách Ngọc Huy"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1fXWQETfUwPKWtuVpv4PNwq7u_M5IY4Zi?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010141",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Đỗ Tú Kiên"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1kH3-dMhBQNEkZWXmUAdmHYIPVh325h34?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010150",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Bùi Phương Lan"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1pFRE__NXRmOuQjo4ECyjg4_aR2IGTksg?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010153",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Dương Khánh Linh"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1WKShuIDl1nJUL30qLBPRZAzQacfafPXi?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010159",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Vũ Thanh Long"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1IWfMr196cljCMwJr2SKD4JgGH26_Vm1_?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010165",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Phùng Duy Mạnh"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1ZRI80n3aRwt3cWveJNMEOXgUr6GZkDr2?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010180",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Hoàng Xuân Nam"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1LD98R0jbsSNEOmoeeiVDtzqHyGfaX_Y6?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010189",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Phan Trung Nghĩa"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1daTr2LNOenK8VlW_IkAhQZs0u6-KQwsn?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010195",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Lê Thị Nhung"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1d_mJJpYxIQXmpDuNtybVMQcAavq1NAEr?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010201",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Hồ Bá Phong"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1dRr_xTVkKis_6vDj3BC3-z66QwSOMWqM?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010207",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Hoàng Thị Quỳnh Phương"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/18lWD9UXXip9uFZD7nuf_r-coiNCBAYTs?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010219",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Nguyễn Ngọc Quân"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1Gs909HT_CAX8e6xSpxLI_dXwy1WtRud0?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010237",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Nguyễn Văn Anh Tú"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1m8Rjqy_WHO2x73RD7pUYSJOcHKanO1LT?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010243",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Phạm Minh Tuấn"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/18QUPzXsEeJ0Zygy2K2LT0b_y9UNkfOq9?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010246",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Đào Thanh Tùng"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1mUThqUJ6HA3ZwmtUWDOUxvFuSg45Mbeb?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010255",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Đỗ Quang Thanh"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1U5yzVWgsJJFaTKeEHIk3_jZ4TfjAbN3B?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010272",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Trần Thị Thúy"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1AshjqF7zAE_Q59aqY7l99271WexR74zK?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010297",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Nguyễn Văn Vương"
+        },
+        {
+            "DiaChi": "Hà Nội",
+            "LinkAnh": "https://drive.google.com/drive/folders/1z0NSSsbGkrE4lrPbXEwdIf5H4ntcqHZx?usp=drive_link",
+            "LopQL": "20CN3",
+            "MSV": "2055010225",
+            "NgSinh": "01-01-2002",
+            "SDT": "0987654321",
+            "TenSV": "Đỗ Thanh Sơn"
+        }
+    ]
+}

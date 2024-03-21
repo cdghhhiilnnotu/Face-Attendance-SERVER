@@ -114,11 +114,22 @@ def api_for_user_by(conn, magv):
     """)
     baocao = cur.fetchall()
 
+    dictBC = listDict(baocao, ['MaBC', 'NgayBC', 'MaSV', 'MaLop', 'DiemDanh', 'GhiChu'])
+
+    cur.execute(f"""
+        SELECT SV.MaSV, SV.TenSV, SV.LopQL, DS.MaLop, DS.SoDD FROM SINHVIEN SV INNER JOIN DSLop DS
+        ON SV.MaSV = DS.MaSV
+        WHERE DS.MaLop IN (SELECT MALOP FROM DSLOP WHERE MALOP IN (SELECT MALOP FROM LOPHOC WHERE MAGV = '{magv}'))
+    """)
+    baocao_all = cur.fetchall()
+
+    dictBC_all = listDict(baocao_all, ['MaSV', 'TenSV', 'LopQL', 'MaLop', 'DiemDanh'])
+    
+
     conn.commit()
     cur.close()
     conn.close()
 
-    dictBC = listDict(baocao, ['MaBC', 'NgayBC', 'MaSV', 'MaLop', 'DiemDanh', 'GhiChu'])
 
     json_user = {}
     json_user['sinhvien'] = dictSV
@@ -126,6 +137,7 @@ def api_for_user_by(conn, magv):
     json_user['lophoc'] = dictLop
     json_user['dslop'] = dictDS
     json_user['baocao'] = dictBC
+    json_user['baocao_all'] = dictBC_all
     return json_user
 
 def api_for_admin_A(conn):
@@ -192,6 +204,18 @@ def api_for_admin_A(conn):
 
     return json_admin_A
 
+def update_dd_student(conn, msv, malop):
+    cur = conn.cursor()
+    cur.execute(f"""
+        UPDATE DSLop SET SoDD = (
+            SELECT count(*) FROM BAOCAO 
+            WHERE MaSV = '{msv}' AND MaLop = '{malop}' AND DIEMDANH = '1' 
+        )
+        WHERE MaSV = '{msv}' AND MaLop = '{malop}'
+    """)
+    conn.commit()
+    cur.close()
+    conn.close()
 
-
-
+def update_report_student(conn, msv, malop):
+    pass

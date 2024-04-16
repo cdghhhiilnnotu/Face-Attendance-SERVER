@@ -2,7 +2,7 @@ import psycopg2
 import json
 import sys
 sys.path.insert(0, '..\\')
-from commons.helper import listDict, api_for_admin, api_for_user_by, api_for_admin_A
+from commons.helper import *
 
 def get_connection():
     conn = psycopg2.connect(host="localhost", dbname="HAU-FACE-DB", user="postgres",
@@ -24,6 +24,16 @@ def get_json_user(username):
     conn = get_connection()
     # cur = conn.cursor()
     return api_for_user_by(conn, username)
+
+def post_diem_danh(masv, malop, ghichu):
+    conn = get_connection()
+    post_bao_cao(conn, masv, malop, ghichu)
+    update_dd_student(conn, masv, malop)
+
+def update_all_bao_cao(malop):
+    conn = get_connection()
+    update_report_student(conn, malop)
+
 
 
 # with open("full-api.json", "w", encoding='utf-8') as outfile:

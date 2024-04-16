@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 def tuple2dict(tpl, nameCol):
     newDict = {}
@@ -217,5 +218,47 @@ def update_dd_student(conn, msv, malop):
     cur.close()
     conn.close()
 
-def update_report_student(conn, msv, malop):
-    pass
+def id_bao_cao_generated(conn):
+    cur = conn.cursor()
+    cur.execute(f"""
+        SELECT MaBC FROM BAOCAO;
+    """)
+    list_MaBC = list(cur.fetchall())
+    list_numMaBC = [x[0].split("BC")[-1] for x in list_MaBC]
+    num_generate = -1
+    for i, maBC in enumerate(list_numMaBC):
+        if not int(maBC.split("BC")[-1]) == i + 1:
+            num_generate = i + 1
+            break
+    if num_generate == -1:
+        num_generate = len(list_numMaBC) + 1
+    return "BC{:08d}".format(num_generate)
+
+def time_bao_cao_generated():
+    now = datetime.now()
+    return now.strftime("%Y-%m-%d %H:%M:%S")
+
+def post_bao_cao(conn, masv, malop, ghichu):
+    cur = conn.cursor()
+    cur.execute(f"""
+        INSERT INTO BAOCAO (MaBC, NgayBC, MaSV, MaLop, DiemDanh, GhiChu)
+        VALUES 
+        ('{id_bao_cao_generated(conn)}', '{time_bao_cao_generated()}', '{masv}', '{malop}', 1, '{ghichu}');
+    """)
+
+def update_report_student(conn, malop):
+    cur = conn.cursor()
+    cur.execute(f"""
+        UPDATE DSLOP
+        SET SoDD = (
+        SELECT COUNT(*)
+        FROM BAOCAO
+        WHERE MASV = DSLOP.MASV
+            AND MALOP = '{malop}'
+            AND DIEMDANH = '1'
+        )
+        WHERE DSLOP.MALOP = '{malop}';
+    """)
+    conn.commit()
+    cur.close()
+    conn.close()

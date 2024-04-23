@@ -34,7 +34,13 @@ def update_all_bao_cao(malop):
     conn = get_connection()
     update_report_student(conn, malop)
 
-
+def execute_SQL(sql_query):
+    conn = get_connection() 
+    cur = conn.cursor()
+    cur.execute(sql_query)
+    conn.commit()
+    cur.close()
+    conn.close()
 
 # with open("full-api.json", "w", encoding='utf-8') as outfile:
 #     json.dump(jsonDict, outfile,ensure_ascii=False)

@@ -61,6 +61,13 @@ def api_for_admin(conn):
 
     dictBC = listDict(baocao, ['MaBC', 'NgayBC', 'MaSV', 'MaLop', 'DiemDanh', 'GhiChu'])
 
+    cur.execute(f"""
+        SELECT MaAD, TenDN, MatKhau FROM ADMIN;
+    """)
+    admin = cur.fetchall()
+
+    dictAdmin = listDict(admin, ['MaAD', 'TenDN', 'MatKhau'])
+
     conn.commit()
     cur.close()
     conn.close()
@@ -69,7 +76,7 @@ def api_for_admin(conn):
 
     json_admin['sinhvien'] = dictSV
     json_admin['giaovien'] = dictGV
-    # json_admin['admin'] = dictAdmin
+    json_admin['admin'] = dictAdmin
     json_admin['lophoc'] = dictLop
     json_admin['dslop'] = dictDS
     json_admin['baocao'] = dictBC
@@ -234,8 +241,26 @@ def id_bao_cao_generated(conn):
         num_generate = len(list_numMaBC) + 1
     return "BC{:08d}".format(num_generate)
 
+def id_admin_generated(conn):
+    cur = conn.cursor()
+    cur.execute(f"""
+        SELECT MaAD FROM ADMIN;
+    """)
+    list_MaAD = list(cur.fetchall())
+    list_numMaAD = [x[0].split("AD")[-1] for x in list_MaAD]
+    num_generate = -1
+    for i, maAD in enumerate(list_numMaAD):
+        if not int(maAD.split("AD")[-1]) == i + 1:
+            num_generate = i + 1
+            break
+    if num_generate == -1:
+        num_generate = len(list_numMaAD) + 1
+    return "AD{:08d}".format(num_generate)
+
 def time_bao_cao_generated():
     now = datetime.now()
+    print(now)
+    print(now.strftime("%Y-%m-%d %H:%M:%S"))
     return now.strftime("%Y-%m-%d %H:%M:%S")
 
 def post_bao_cao(conn, masv, malop, ghichu):

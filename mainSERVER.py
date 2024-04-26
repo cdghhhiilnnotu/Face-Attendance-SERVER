@@ -11,6 +11,10 @@ json_admin = get_json_admin()
 def get_all():
     return jsonify(json_admin)
 
+@app.route('/admin/logging/<username>/<password>', methods=['GET'])
+def get_logging_admin(username, password):
+    return jsonify(api_admin_loggin(username, password, json_admin['admin']))
+
 @app.route('/giaovien/logging/<username>/<password>', methods=['GET'])
 def get_logging_user(username, password):
     return jsonify(api_user_loggin(username, password, json_admin['giaovien']))

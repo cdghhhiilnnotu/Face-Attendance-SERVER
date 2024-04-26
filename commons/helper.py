@@ -20,6 +20,13 @@ def api_user_loggin(username, password,user_api):
                 return x
     return {}
 
+def api_admin_loggin(username, password,user_api):
+    for x in user_api:
+        if x['MaAD'] == username:
+            if x['MatKhau'] == password:
+                return x
+    return {}
+
 def api_for_admin(conn):
     cur = conn.cursor()
     cur.execute(f"""
@@ -132,7 +139,17 @@ def api_for_user_by(conn, magv):
     baocao_all = cur.fetchall()
 
     dictBC_all = listDict(baocao_all, ['MaSV', 'TenSV', 'LopQL', 'MaLop', 'DiemDanh'])
-    
+
+    cur.execute(f"""
+        SELECT SV.MaSV, SV.TenSV, SV.LopQL, DS.MaLop, TO_CHAR(DS.NgayBC, 'dd-mm-yyyy HH:MM:SS') AS NgayBC FROM SINHVIEN SV INNER JOIN BAOCAO DS
+        ON SV.MaSV = DS.MaSV
+        WHERE DS.MaLop IN 
+        (SELECT MALOP FROM DSLOP WHERE MALOP IN 
+        (SELECT MALOP FROM LOPHOC WHERE MAGV = '{magv}'))
+    """)
+    baocao_detail = cur.fetchall()
+
+    dictBC_detail = listDict(baocao_detail, ['MaSV', 'TenSV', 'LopQL', 'MaLop', 'DiemDanh'])
 
     conn.commit()
     cur.close()
@@ -146,6 +163,7 @@ def api_for_user_by(conn, magv):
     json_user['dslop'] = dictDS
     json_user['baocao'] = dictBC
     json_user['baocao_all'] = dictBC_all
+    json_user['baocao_detail'] = dictBC_detail
     return json_user
 
 def api_for_admin_A(conn):

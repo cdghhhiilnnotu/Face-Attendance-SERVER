@@ -141,7 +141,7 @@ def api_for_user_by(conn, magv):
     dictBC_all = listDict(baocao_all, ['MaSV', 'TenSV', 'LopQL', 'MaLop', 'DiemDanh'])
 
     cur.execute(f"""
-        SELECT SV.MaSV, SV.TenSV, SV.LopQL, DS.MaLop, TO_CHAR(DS.NgayBC, 'dd-mm-yyyy HH:MM:SS') AS NgayBC FROM SINHVIEN SV INNER JOIN BAOCAO DS
+        SELECT SV.MaSV, SV.TenSV, SV.LopQL, DS.MaLop, TO_CHAR(DS.NgayBC, 'dd-mm-yyyy HH:MM:SS') AS NgayBC, DS.GhiChu FROM SINHVIEN SV INNER JOIN BAOCAO DS
         ON SV.MaSV = DS.MaSV
         WHERE DS.MaLop IN 
         (SELECT MALOP FROM DSLOP WHERE MALOP IN 
@@ -149,7 +149,7 @@ def api_for_user_by(conn, magv):
     """)
     baocao_detail = cur.fetchall()
 
-    dictBC_detail = listDict(baocao_detail, ['MaSV', 'TenSV', 'LopQL', 'MaLop', 'DiemDanh'])
+    dictBC_detail = listDict(baocao_detail, ['MaSV', 'TenSV', 'LopQL', 'MaLop', 'DiemDanh', 'GhiChu'])
 
     conn.commit()
     cur.close()

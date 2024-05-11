@@ -26,7 +26,7 @@ def get_api_for_user(username):
 @app.route('/giaovien/baocao', methods=['POST'])
 def post_report():
     post_diem_danh(request.form['masv'],request.form['malop'],request.form['ghichu'])
-    return {}, 201
+    return json_admin, 201
 
 @app.route('/giaovien/baocao/<malop>', methods=['GET'])
 def get_all_baocao(malop):
@@ -84,7 +84,7 @@ def post_admin():
                     ('{id_admin_generated(get_connection())}', '{request.form["TenDN"]}', '{request.form["MatKhau"]}');""")
     global json_admin
     json_admin = get_json_admin()
-    return {}, 201
+    return json_admin, 201
 
 @app.route('/admin/put', methods=['PUT'])
 def put_admin():
@@ -92,7 +92,7 @@ def put_admin():
                     TenDN = '{request.form["TenDN"]}', MatKhau = '{request.form["MatKhau"]}' WHERE MaAD = '{request.form["MaAD"]}';""")
     global json_admin
     json_admin = get_json_admin()
-    return {}, 201
+    return json_admin, 201
 
 
 # GIAOVIEN - POST, PUT 
@@ -100,7 +100,7 @@ def put_admin():
 def post_teacher():
     execute_SQL(f"""INSERT INTO GIAOVIEN (MaGV, TenGV, NgSinh, DiaChi, MatKhau, SDT)
                     VALUES
-                    ('{request.form["MaGV"]}', 
+                    ('{id_giang_vien_generated(get_connection())}', 
                     '{request.form["TenGV"]}',
                     '{request.form["NgSinh"]}',
                     '{request.form["DiaChi"]}',
@@ -108,7 +108,7 @@ def post_teacher():
                     '{request.form["SDT"]}');""")
     global json_admin
     json_admin = get_json_admin()
-    return {}
+    return json_admin, 201
 
 @app.route('/teacher/put', methods=['PUT'])
 def put_teacher():
@@ -121,7 +121,7 @@ def put_teacher():
                     WHERE MaGV = '{request.form["MaGV"]}';""")
     global json_admin
     json_admin = get_json_admin()
-    return {}
+    return json_admin, 201
 
 # SINHVIEN - POST, PUT 
 @app.route('/student/post', methods=['POST'])
@@ -137,7 +137,7 @@ def post_student():
                     '{request.form["SDT"]}');""")
     global json_admin
     json_admin = get_json_admin()
-    return {}
+    return json_admin, 201
 
 @app.route('/student/put', methods=['PUT'])
 def put_student():
@@ -151,7 +151,7 @@ def put_student():
                     WHERE MaSV = '{request.form["MaSV"]}';""")
     global json_admin
     json_admin = get_json_admin()
-    return {}
+    return json_admin, 201
 
 
 # LOPHOC - POST, PUT 
@@ -168,7 +168,7 @@ def post_lophoc():
                     '{request.form["SoNgay"]}');""")
     global json_admin
     json_admin = get_json_admin()
-    return {}
+    return json_admin, 201
 
 @app.route('/lophoc/put', methods=['PUT'])
 def put_lophoc():
@@ -182,7 +182,7 @@ def put_lophoc():
                     WHERE MaLop = '{request.form["MaLop"]}';""")
     global json_admin
     json_admin = get_json_admin()
-    return {}
+    return json_admin, 201
 
 
 # BAOCAO - POST, PUT 
@@ -190,7 +190,7 @@ def put_lophoc():
 def post_baocao():
     execute_SQL(f"""INSERT INTO BAOCAO (MaBC, NgayBC, MaSV, MaLop, DiemDanh, GhiChu)
                     VALUES
-                    ('{request.form["MaBC"]}', 
+                    ('{id_bao_cao_generated(get_connection())}', 
                     '{request.form["NgayBC"]}',
                     '{request.form["MaSV"]}',
                     '{request.form["MaLop"]}',
@@ -198,7 +198,7 @@ def post_baocao():
                     '{request.form["GhiChu"]}');""")
     global json_admin
     json_admin = get_json_admin()
-    return {}
+    return json_admin, 201
 
 @app.route('/baocao/put', methods=['PUT'])
 def put_baocao():
@@ -211,20 +211,20 @@ def put_baocao():
                     WHERE MaBC = '{request.form["MaBC"]}';""")
     global json_admin
     json_admin = get_json_admin()
-    return {}
+    return json_admin, 201
 
 # DSLOP - POST, PUT 
 @app.route('/dslop/post', methods=['POST'])
 def post_dslop():
     execute_SQL(f"""INSERT INTO dslop (MaDS, MaLop, MaSV, SoDD)
                     VALUES
-                    ('{request.form["MaDS"]}', 
+                    ('{id_danh_sach_generated(get_connection())}', 
                     '{request.form["MaLop"]}',
                     '{request.form["MaSV"]}',
                     '{request.form["SoDD"]}');""")
     global json_admin
     json_admin = get_json_admin()
-    return {}
+    return json_admin, 201
 
 @app.route('/dslop/put', methods=['PUT'])
 def put_dslop():
@@ -235,7 +235,7 @@ def put_dslop():
                     WHERE MaDS = '{request.form["MaDS"]}';""")
     global json_admin
     json_admin = get_json_admin()
-    return {}
+    return json_admin, 201
 
 
 if __name__ == "__main__":

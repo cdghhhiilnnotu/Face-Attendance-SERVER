@@ -246,7 +246,7 @@ def update_dd_student(conn, msv, malop):
 def id_bao_cao_generated(conn):
     cur = conn.cursor()
     cur.execute(f"""
-        SELECT MaBC FROM BAOCAO;
+        SELECT MaBC FROM BAOCAO ORDER BY MaBC;
     """)
     list_MaBC = list(cur.fetchall())
     list_numMaBC = [x[0].split("BC")[-1] for x in list_MaBC]
@@ -262,7 +262,7 @@ def id_bao_cao_generated(conn):
 def id_admin_generated(conn):
     cur = conn.cursor()
     cur.execute(f"""
-        SELECT MaAD FROM ADMIN;
+        SELECT MaAD FROM ADMIN ORDER BY MaAD;
     """)
     list_MaAD = list(cur.fetchall())
     list_numMaAD = [x[0].split("AD")[-1] for x in list_MaAD]
@@ -280,6 +280,38 @@ def time_bao_cao_generated():
     print(now)
     print(now.strftime("%Y-%m-%d %H:%M:%S"))
     return now.strftime("%Y-%m-%d %H:%M:%S")
+
+def id_danh_sach_generated(conn):
+    cur = conn.cursor()
+    cur.execute(f"""
+        SELECT MaDS FROM DSLOP ORDER BY MaDS;
+    """)
+    list_MaDS = list(cur.fetchall())
+    list_numMaDS = [x[0].split("DS")[-1] for x in list_MaDS]
+    num_generate = -1
+    for i, MaDS in enumerate(list_numMaDS):
+        if not int(MaDS.split("DS")[-1]) == i + 1:
+            num_generate = i + 1
+            break
+    if num_generate == -1:
+        num_generate = len(list_numMaDS) + 1
+    return "DS{:08d}".format(num_generate)
+
+def id_giang_vien_generated(conn):
+    cur = conn.cursor()
+    cur.execute(f"""
+        SELECT MaGV FROM GIAOVIEN ORDER BY MaGV;
+    """)
+    list_MaGV = list(cur.fetchall())
+    list_numMaGV = [x[0].split("GV")[-1] for x in list_MaGV]
+    num_generate = -1
+    for i, maGV in enumerate(list_numMaGV):
+        if not int(maGV.split("GV")[-1]) == i + 1:
+            num_generate = i + 1
+            break
+    if num_generate == -1:
+        num_generate = len(list_numMaGV) + 1
+    return "GV{:08d}".format(num_generate)
 
 def post_bao_cao(conn, masv, malop, ghichu):
     cur = conn.cursor()
